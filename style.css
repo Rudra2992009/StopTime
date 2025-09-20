@@ -1,0 +1,219 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: #e0e0e0;
+}
+
+.container {
+    background-color: #3a3f4b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #61dafb;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #444;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    color: #e0e0e0;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: color 0.3s, background-color 0.3s;
+    border-bottom: 3px solid transparent;
+    margin: 0 5px;
+}
+
+.tab-button:hover {
+    color: #61dafb;
+}
+
+.tab-button.active {
+    color: #61dafb;
+    border-bottom-color: #61dafb;
+    background-color: #4a4f5b;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    color: #98c379;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+#current-time, .timer-display, .stopwatch-display {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #e6c07b;
+    font-family: 'Lucida Console', Monaco, monospace;
+}
+
+.region-selector, .timer-controls, .stopwatch-controls, .alarm-set {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.1em;
+    color: #c678dd;
+    align-self: center;
+}
+
+select, input[type="number"], input[type="time"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #282c34;
+    color: #e0e0e0;
+    font-size: 1em;
+    outline: none;
+}
+
+select:focus, input:focus {
+    border-color: #61dafb;
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
+}
+
+button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #21a1f1;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#laps, #alarms-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #282c34;
+}
+
+#laps li, #alarms-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#laps li:last-child, #alarms-list li:last-child {
+    border-bottom: none;
+}
+
+#laps li span, #alarms-list li span {
+    color: #e0e0e0;
+}
+
+#alarms-list li button {
+    background-color: #e06c75;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+#alarms-list li button:hover {
+    background-color: #be5046;
+}
+
+input[type="range"] {
+    width: 150px;
+    -webkit-appearance: none;
+    height: 8px;
+    background: #555;
+    border-radius: 5px;
+    outline: none;
+    transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #61dafb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #61dafb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volume-display {
+    color: #61dafb;
+    font-weight: bold;
+    min-width: 50px;
+    text-align: left;
+}
+
+#world-clocks div {
+    background-color: #282c34;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+#world-clocks div span:first-child {
+    color: #c678dd;
+}
+
+#world-clocks div span:last-child {
+    color: #e6c07b;
+}
